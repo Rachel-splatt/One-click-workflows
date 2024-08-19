@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workflows</title>
+    <link rel="stylesheet" crossorigin="anonymous" href="Workflows_files/design-e142a072.css" />
+    <style>
+      .stats-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+          gap: var(--spacer-4);
+          transition: height 0.5s ease-out;
+      }
+
+      .one-click-workflows {
+          transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+      }
+
+      .no-transition {
+          transition: none !important;
+      }
+  </style>
+</head>
+<body class="mac sidebar-nav" id="app">
+    <nav aria-label="Main" class="">
+        <div class="navbar">
+            <a href="#"><span class="logo-g"> </span></a>
+            <h1>Workflows</h1>
+            <button class="toggle"></button>
+        </div>
+        <header>
+            <a href="#" aria-label="Dashboard"><span class="logo-full"> </span></a>
+        </header>
+        <section>
+            <a href="#" title="Home"><span class="icon icon-shop-window-fill"></span>Home</a>
+            <a href="#" title="Products"><span class="icon icon-archive-fill"></span>Products</a>
+            <a href="#" title="Collaborators"><span class="icon icon-deal-fill"></span>Collaborators</a>
+            <a href="#" title="Checkout"><span class="icon icon-cart3-fill"></span>Checkout</a>
+            <a href="#" title="Emails"><span class="icon icon-envelope-fill"></span>Emails</a>
+            <a aria-current="page" href="#" title="Workflows"><span class="icon icon-diagram-2-fill"></span>Workflows</a>
+            <a href="#" title="Sales"><span class="icon icon-solid-currency-dollar"></span>Sales</a>
+            <a href="#" title="Analytics"><span class="icon icon-bar-chart-fill"></span>Analytics</a>
+            <a href="#" title="Payouts"><span class="icon icon-solid-currency-dollar"></span>Payouts</a>
+        </section>
+        <section>
+            <a href="#" title="Discover"><span class="icon icon-solid-search"></span>Discover</a>
+            <a href="#" title="Library"><span class="icon icon-bookmark-heart-fill"></span>Library</a>
+        </section>
+        <footer>
+            <a href="#" title="Help"><span class="icon icon-book-half"></span>Help</a>
+            <a href="#" title="Settings"><span class="icon icon-gear-fill"></span>Settings</a>
+        </footer>
+    </nav>
+
+    <div class="react-entry-point" style="display:contents" id="WorkflowsPage-react-component-eb01371e-5074-4c2b-a179-ed3ae309ca64">
+        <header class="sticky">
+            <h1>Workflows</h1>
+            <div class="actions">
+                <a class="button accent" href="#">New workflow</a>
+            </div>
+        </header>
+
+        <main>
+            <div id="one-click-workflows-container">
+                  <h3 style="margin-right: auto; margin-bottom: 1rem;">Send top performing offers to interested shoppers:</h3>
+           
+            <div class="stats-grid">
+                  <section class="one-click-workflows" data-workflow-type="Wishlist Discount">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMzEiIHZpZXdCb3g9IjAgMCAzNiAzMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2LjgxIDQuODA2MzFDMTUuMzA5OCAyLjY0ODY1IDEyLjU2NDMgMSA5LjUgMUM0LjgwMzc1IDEgMSA0Ljc4Mzc5IDEgOS40NTA0NUMxIDE4LjI0MDkgOS44MTUzOSAyNS41NDU4IDE0Ljc1MDEgMjguOTQ2NEMxNi43MjI3IDMwLjMwNTcgMTkuMjc3MyAzMC4zMDU3IDIxLjI0OTkgMjguOTQ2NEMyNi4xODQ2IDI1LjU0NTggMzUgMTguMjQwOSAzNSA5LjQ1MDQ1QzM1IDQuNzgzNzkgMzEuMTk2MiAxIDI2LjUgMUMyMy42MzU1IDEgMjAuODkgMi42MzA2MyAxOS4zMjYgNC44MDYzMUwxOS4yODA4IDQuODY4NjNDMTguNjY2NiA1LjcxNTc5IDE3LjQwMDkgNS42Njk5MSAxNi44MSA0LjgwNjMxWiIgZmlsbD0iI0ZGOTBFNyIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIwLjUiLz4KPHBhdGggZD0iTTE3LjMgMTAuMTU2OUMxNi40MTc1IDguOTM0MjQgMTQuODAyNSA4IDEzIDhDMTAuMjM3NSA4IDggMTAuMTQ0MSA4IDEyLjc4ODZDOCAxOS43MDYgMTggMjUgMTggMjVDMTggMjUgMjggMTkuNzA2IDI4IDEyLjc4ODZDMjggMTAuMTQ0MSAyNS43NjI1IDggMjMgOEMyMS4zMTUgOCAxOS43IDguOTI0MDMgMTguNzggMTAuMTU2OUwxOCAxMS4xOTMyQzE4IDExLjE5MzIgMTcuNTM3NSAxMC40OTEzIDE3LjMgMTAuMTU2OVoiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMC41Ii8+CjxwYXRoIGQ9Ik04LjUgOC45MTMzOEw5LjQ5NzM0IDEyLjQxOEw5LjUyNzI5IDEyLjUyMzNMOS42MjQ5MyAxMi41NzI3TDEyLjQ0NjIgMTRMOS42MjQ5MyAxNS40MjczTDkuNTI3MjkgMTUuNDc2N0w5LjQ5NzM0IDE1LjU4Mkw4LjUgMTkuMDg2Nkw3LjUwMjY2IDE1LjU4Mkw3LjQ3MjcxIDE1LjQ3NjdMNy4zNzUwNyAxNS40MjczTDQuNTUzOCAxNEw3LjM3NTA3IDEyLjU3MjdMNy40NzI3MSAxMi41MjMzTDcuNTAyNjYgMTIuNDE4TDguNSA4LjkxMzM4WiIgZmlsbD0iI0ZGOTBFNyIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIwLjUiLz4KPC9zdmc+Cg=="
+                              width="40" height="40">
+
+                        <h4><b>Wished-for item</b></h4>
+                        <p style="font-size:medium;">Send shoppers 15% off items they add to a wishlist.</p>
+                        <p style="font-size:small;"><span class="icon icon-heart-stroke" style="color:rgb(var(--color)); mask-size: 100%;"></span> Your items are on <b>32</b> shoppers' wishlists.</p>
+      
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: var(--spacer-4);">
+                              <p class="workflow-status" style="margin: 0;"><span class="icon icon-circle" style="color:rgb(var(--color))"></span> Unpublished</p>
+                              <div class="button-group">
+                                    <button class="button"><span class="icon icon-pencil"></span></button>
+                                    <button class="button primary">Publish</button>
+                              </div>
+                        </div>
+                  </section>
+                  <section class="one-click-workflows" data-workflow-type="Thank You Discount">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzQiIGhlaWdodD0iMzEiIHZpZXdCb3g9IjAgMCAzNCAzMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzIwMThfMzA5KSI+CjxtYXNrIGlkPSJwYXRoLTEtaW5zaWRlLTFfMjAxOF8zMDkiIGZpbGw9IndoaXRlIj4KPHBhdGggZD0iTTMzLjE3MTMgMTIuNjMxN0MzMy4wMTM3IDExLjkxIDMyLjY3MjMgMTEuMjQyMSAzMi4xODA2IDEwLjY5MzRDMzIuMDk5NyAxMC40MjIzIDMxLjk5MTUgMTAuMTYwMyAzMS44NTc4IDkuOTExM0MzMS41MDExIDkuMjU2OTcgMzAuOTgyOCA4LjcwNjA0IDMwLjM1MzMgOC4zMTE1OUMyOS43MjM2IDcuOTE3MTYgMjkuMDAzOSA3LjY5MjQ0IDI4LjI2MjkgNy42NTkxMkMyNy45NDM2IDcuNjQzODEgMjcuNjIzMyA3LjY2NDc1IDI3LjMwODcgNy43MjE0M0wyNy4yMTY0IDcuNjk3OTlDMjYuOTc0MyA3LjY0MzU5IDI2LjcyNzggNy42MDk1IDI2LjQ4IDcuNTk2MDlDMjYuMzE3IDcuMTUxMzQgMjYuMDcxNSA2Ljc0MTg4IDI1Ljc1NjIgNi4zODk1NUwyMy42OTM1IDQuMDc4NTNDMjMuNTI1NCAzLjg5MDEyIDIzLjMzODcgMy43MTkyNSAyMy4xMzY0IDMuNTY4NTFDMjMuMDY4MSAyLjYzOTE5IDIyLjY1ODYgMS43Njg3NSAyMS45ODc0IDEuMTI2NjJDMjEuMzE2NCAwLjQ4NDQ4MyAyMC40MzIyIDAuMTE2NTI3IDE5LjUwNjUgMC4wOTQ0NTA1TDE1LjgwMjMgMC4wMDExODQyNUMxNS4yMzk4IC0wLjAxMzAyMzggMTQuNjgxMyAwLjEwMDc3MSAxNC4xNjg3IDAuMzM0MDg2QzEzLjY1NiAwLjU2NzQwMSAxMy4yMDIzIDAuOTE0MTkzIDEyLjg0MTQgMS4zNDg2MkMxMi40ODA2IDEuNzgzMDUgMTIuMjIxOCAyLjI5Mzg5IDEyLjA4NDUgMi44NDMwMUMxMS45NDczIDMuMzkyMTIgMTEuOTM0OSAzLjk2NTM3IDEyLjA0ODUgNC41MTk5M0wxMi4wOTg3IDQuNzY2MTdDMTEuOTQyMyA0Ljg2MjUxIDExLjc5MzUgNC45NzA3MSAxMS42NTM2IDUuMDg5OUw5LjIxNTEyIDcuMTY3MDJDOS4wMjIzOSA3LjMzMTI1IDguODQ2NzQgNy41MTQ3NCA4LjY5MDg1IDcuNzE0NzJDOC4wNjIxMiA3LjU2ODggNy40MDg1OCA3LjU2ODg5IDYuNzc5ODkgNy43MTQ5OEw2LjY4Nzg0IDcuNzM4NDZDNS42NTQzNyA3LjU0Mjk1IDQuNTg1NTYgNy43MzgyOSAzLjY4NjM2IDguMjg3QzIuNzg3MTkgOC44MzU3MiAyLjEyMDkzIDkuNjk5MTkgMS44MTUzOSAxMC43MTE4QzEuMzI0NzMgMTEuMjYxMiAwLjk4MzYzMyAxMS45MjkxIDAuODI1MjQxIDEyLjY1MDRDLTAuMjgwMzMzIDE0LjE3NSAtMC4yODM1MzcgMTYuMzkxMiAwLjg2Njg1OCAxOC43OTVDMS4yNTk2NSAxOS42MTU4IDIuNTE3MjMgMjEuODQzNiAzLjUxOTQ5IDIzLjE5NDVDMy45MzU1NiAyMy43NTI2IDQuODQ0NjMgMjUuMjAzIDUuNTYyNiAyNi4zODAzTDUuNTYyNzEgMjcuMjM5OUM1LjU2MjggMjguMjM3MSA1Ljk1NjYzIDI5LjE5MzYgNi42NTc1NiAyOS44OTlDNy4zNTg0MyAzMC42MDQgOC4zMDg5OCAzMSA5LjMwMDA2IDMxTDI0LjcwMTggMzAuOTgxNEMyNS42OTI3IDMwLjk4MDggMjYuNjQzIDMwLjU4NDQgMjcuMzQzNyAyOS44NzkyQzI4LjA0NDMgMjkuMTczOCAyOC40Mzc5IDI4LjIxNzUgMjguNDM4MSAyNy4yMjAxTDI4LjQzNzkgMjYuMzYzQzI5LjE1NTYgMjUuMTkwMiAzMC4wNjg4IDIzLjczNDcgMzAuNDgwMiAyMy4xNzY0QzMxLjQ4MiAyMS44MzI2IDMyLjczNzcgMTkuNTk3NCAzMy4xMzE1IDE4Ljc3NjRDMzQuMjg4MyAxNi4zNzIyIDM0LjI3NzQgMTQuMTU1OSAzMy4xNzEzIDEyLjYzMTdaIi8+CjwvbWFzaz4KPHBhdGggZD0iTTMzLjE3MTMgMTIuNjMxN0MzMy4wMTM3IDExLjkxIDMyLjY3MjMgMTEuMjQyMSAzMi4xODA2IDEwLjY5MzRDMzIuMDk5NyAxMC40MjIzIDMxLjk5MTUgMTAuMTYwMyAzMS44NTc4IDkuOTExM0MzMS41MDExIDkuMjU2OTcgMzAuOTgyOCA4LjcwNjA0IDMwLjM1MzMgOC4zMTE1OUMyOS43MjM2IDcuOTE3MTYgMjkuMDAzOSA3LjY5MjQ0IDI4LjI2MjkgNy42NTkxMkMyNy45NDM2IDcuNjQzODEgMjcuNjIzMyA3LjY2NDc1IDI3LjMwODcgNy43MjE0M0wyNy4yMTY0IDcuNjk3OTlDMjYuOTc0MyA3LjY0MzU5IDI2LjcyNzggNy42MDk1IDI2LjQ4IDcuNTk2MDlDMjYuMzE3IDcuMTUxMzQgMjYuMDcxNSA2Ljc0MTg4IDI1Ljc1NjIgNi4zODk1NUwyMy42OTM1IDQuMDc4NTNDMjMuNTI1NCAzLjg5MDEyIDIzLjMzODcgMy43MTkyNSAyMy4xMzY0IDMuNTY4NTFDMjMuMDY4MSAyLjYzOTE5IDIyLjY1ODYgMS43Njg3NSAyMS45ODc0IDEuMTI2NjJDMjEuMzE2NCAwLjQ4NDQ4MyAyMC40MzIyIDAuMTE2NTI3IDE5LjUwNjUgMC4wOTQ0NTA1TDE1LjgwMjMgMC4wMDExODQyNUMxNS4yMzk4IC0wLjAxMzAyMzggMTQuNjgxMyAwLjEwMDc3MSAxNC4xNjg3IDAuMzM0MDg2QzEzLjY1NiAwLjU2NzQwMSAxMy4yMDIzIDAuOTE0MTkzIDEyLjg0MTQgMS4zNDg2MkMxMi40ODA2IDEuNzgzMDUgMTIuMjIxOCAyLjI5Mzg5IDEyLjA4NDUgMi44NDMwMUMxMS45NDczIDMuMzkyMTIgMTEuOTM0OSAzLjk2NTM3IDEyLjA0ODUgNC41MTk5M0wxMi4wOTg3IDQuNzY2MTdDMTEuOTQyMyA0Ljg2MjUxIDExLjc5MzUgNC45NzA3MSAxMS42NTM2IDUuMDg5OUw5LjIxNTEyIDcuMTY3MDJDOS4wMjIzOSA3LjMzMTI1IDguODQ2NzQgNy41MTQ3NCA4LjY5MDg1IDcuNzE0NzJDOC4wNjIxMiA3LjU2ODggNy40MDg1OCA3LjU2ODg5IDYuNzc5ODkgNy43MTQ5OEw2LjY4Nzg0IDcuNzM4NDZDNS42NTQzNyA3LjU0Mjk1IDQuNTg1NTYgNy43MzgyOSAzLjY4NjM2IDguMjg3QzIuNzg3MTkgOC44MzU3MiAyLjEyMDkzIDkuNjk5MTkgMS44MTUzOSAxMC43MTE4QzEuMzI0NzMgMTEuMjYxMiAwLjk4MzYzMyAxMS45MjkxIDAuODI1MjQxIDEyLjY1MDRDLTAuMjgwMzMzIDE0LjE3NSAtMC4yODM1MzcgMTYuMzkxMiAwLjg2Njg1OCAxOC43OTVDMS4yNTk2NSAxOS42MTU4IDIuNTE3MjMgMjEuODQzNiAzLjUxOTQ5IDIzLjE5NDVDMy45MzU1NiAyMy43NTI2IDQuODQ0NjMgMjUuMjAzIDUuNTYyNiAyNi4zODAzTDUuNTYyNzEgMjcuMjM5OUM1LjU2MjggMjguMjM3MSA1Ljk1NjYzIDI5LjE5MzYgNi42NTc1NiAyOS44OTlDNy4zNTg0MyAzMC42MDQgOC4zMDg5OCAzMSA5LjMwMDA2IDMxTDI0LjcwMTggMzAuOTgxNEMyNS42OTI3IDMwLjk4MDggMjYuNjQzIDMwLjU4NDQgMjcuMzQzNyAyOS44NzkyQzI4LjA0NDMgMjkuMTczOCAyOC40Mzc5IDI4LjIxNzUgMjguNDM4MSAyNy4yMjAxTDI4LjQzNzkgMjYuMzYzQzI5LjE1NTYgMjUuMTkwMiAzMC4wNjg4IDIzLjczNDcgMzAuNDgwMiAyMy4xNzY0QzMxLjQ4MiAyMS44MzI2IDMyLjczNzcgMTkuNTk3NCAzMy4xMzE1IDE4Ljc3NjRDMzQuMjg4MyAxNi4zNzIyIDM0LjI3NzQgMTQuMTU1OSAzMy4xNzEzIDEyLjYzMTdaIiBmaWxsPSIjRjFGMzMyIiBzdHJva2U9ImJsYWNrIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIG1hc2s9InVybCgjcGF0aC0xLWluc2lkZS0xXzIwMThfMzA5KSIvPgo8cGF0aCBkPSJNMjIuMzcxMSAxNi44MzAzQzIyLjM3MTEgMTYuODMwMyAyNC4xNzM0IDE1LjU0IDI1LjE0OTYgMTMuNTc5MkMyNi4xMjU5IDExLjYxODQgMjYuNDMxMSAxMC45NDY0IDI3LjAyNzUgMTEuMDgzNkMyOC4xMyAxMS4zMzU1IDI3LjE1ODQgMTMuMjYzNSAyNi44Mjg3IDE0LjAwN0MyNi40MDI0IDE0Ljk2NTEgMjUuMjc1OSAxNi42NTM5IDI1LjI3NTkgMTYuNjUzOSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIwLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8cGF0aCBkPSJNMjYuOTI4OCAxMy44NTU4QzI2LjkyODggMTMuODU1OCAyNy45MTA3IDExLjk1NzEgMjguMjEgMTEuNTEwM0MyOC42MTA4IDEwLjkwNTIgMjkuMjA3NCAxMS4xNDY2IDI5LjM2MTMgMTEuNDM1MUMyOS41MzczIDExLjc2MjIgMjkuMzM2OSAxMi40NDI0IDI5LjAzNjUgMTMuMTc0MkMyOC43MzU5IDEzLjkwNiAyNy40ODM3IDE2LjU1MTcgMjYuOTA4MiAxNy4zNTg1IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjAuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxwYXRoIGQ9Ik0yOS4wMzE3IDEzLjE3NUMyOS4wMzE3IDEzLjE3NSAyOS41NTcyIDEyLjUxOTMgMzAuMTA4NCAxMi45MjI3QzMwLjU1MjMgMTMuMjQ3NCAzMC40MzQ3IDEzLjY3NzggMzAuMDg0MSAxNC42NjE4QzI5LjczMzUgMTUuNjQ1NSAyOC43MDcyIDE3LjkzODIgMjguMDA1OSAxOC41OTM4IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjAuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxwYXRoIGQ9Ik0yNC4zMDA4IDE2LjIxNDRDMjQuMzAwOCAxNi4yMTQ0IDI2Ljg0MjIgMTcuMjI3MiAyOC4zMzMgMTkuMDg1NCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIwLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8cGF0aCBkPSJNMzAuMDEwMiAxNC44Mzc3QzMwLjAxMDIgMTQuODM3NyAzMC40MTA4IDE0LjI1ODQgMzAuOTYyMiAxNC43MTIxQzMxLjQ0MjIgMTUuMTA3MiAzMC45NjI0IDE2LjU3NjYgMzAuNjM3NSAxNy4yNTgxQzMwLjMxMjUgMTcuOTM5NCAyOS4xMDkxIDIwLjA4MDcgMjguMjA4NyAyMS4yOTFDMjcuMzA4IDIyLjUwMTUgMjUuMjI4NiAyNS45ODIxIDI1LjIyODYgMjUuOTgyMUwyNS4yMjg4IDI4LjAyMzZMMTcuOTM4MiAyOC4wMjQ2QzE3LjkzODIgMjguMDI0NiAxNy44NjU2IDI0Ljc3NjUgMTcuODY1MiAyMi4zNTYzQzE3Ljg2NDkgMTkuOTM1NyAxOS4yMTczIDE3Ljk3MDIgMjAuMTk0OCAxNi43NjFDMjEuMTcyMyAxNS41NTE5IDIxLjU1NDIgMTQuNjg4NyAyMS44OTY3IDE0LjA2MzhDMjIuMjk3NSAxMy4zMzMyIDIzLjM0OTcgMTMuODExNCAyMy4xOTk1IDE0LjY0MjlDMjMuMDQ5NCAxNS40NzQzIDIxLjc3MjYgMTguMTIxMSAyMS43NzI2IDE4LjEyMTFDMjIuNTUwMyAxOC45NCAyMy4wMDU5IDIwLjAxNDkgMjMuMDU0OCAyMS4xNDY1IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjAuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxwYXRoIGQ9Ik0yNC4xNTA0IDE4Ljc3MDVDMjQuMTUwNCAxOC43NzA1IDI1LjM1MTggMTkuNzI4NSAyNS43MDI2IDIwLjY4NjUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMC41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPHBhdGggZD0iTTExLjYyNzIgMTYuODQ5NEMxMS42MjcyIDE2Ljg0OTQgOS44MjQ0NiAxNS41NTk2IDguODQ2NTcgMTMuNTk4QzcuODY4NyAxMS42MzYzIDcuNTY0NDkgMTAuOTY2OCA2Ljk2NzkxIDExLjEwMjlDNS44NjY4NCAxMS4zNTUyIDYuODM4ODcgMTMuMjg0MSA3LjE2ODc1IDE0LjAyNzVDNy41OTUzMyAxNC45ODQyIDguNzIyMzUgMTYuNjcyOCA4LjcyMjM1IDE2LjY3MjgiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMC41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPHBhdGggZD0iTTcuMDY3ODIgMTMuODcxNEM3LjA2NzgyIDEzLjg3MTQgNi4wODY0NyAxMS45NzMgNS43ODU3OCAxMS41MjYzQzUuMzg0ODUgMTAuOTIxMiA0Ljc4ODMxIDExLjE2MTcgNC42MzM0IDExLjQ1MDJDNC40NTg2NiAxMS43Nzg2IDQuNjU5MTYgMTIuNDU4NyA0Ljk1OTg5IDEzLjE4OTJDNS4yNjA2MyAxMy45MTk3IDYuNTEyNDMgMTYuNTY3MyA3LjA4OTMyIDE3LjM3MjgiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMC41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPHBhdGggZD0iTTQuOTY0ODIgMTMuMTk0OEM0Ljk2NDgyIDEzLjE5NDggNC40MzgwNSAxMi41NDA1IDMuODg4MTIgMTIuOTQyOEMzLjQ0MzA2IDEzLjI2ODkgMy41NjE5NyAxMy42OTkyIDMuOTEyODUgMTQuNjgzQzQuMjYzNjkgMTUuNjY2OCA1LjI5MDU3IDE3Ljk1OTEgNS45OTIxMyAxOC42MTM0IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjAuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxwYXRoIGQ9Ik05LjcwMzEgMTYuMjMyOUM5LjcwMzEgMTYuMjMyOSA3LjE2MTkzIDE3LjI0NTIgNS42NzE4OCAxOS4xMDUzIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjAuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxwYXRoIGQ9Ik0zLjk5Mjc0IDE0Ljg1OTFDMy45OTI3NCAxNC44NTkxIDMuNTkxODQgMTQuMjc5OSAzLjA0MDc2IDE0LjczMjdDMi41NjA3NCAxNS4xMjc4IDMuMDQxMDQgMTYuNTk4NCAzLjM2NjIzIDE3LjI3ODRDMy42OTE0MSAxNy45NTg0IDQuODk0MiAyMC4xMDIgNS43OTYyMiAyMS4zMTA4QzYuNjk4MjcgMjIuNTE5OCA4Ljc3NzUzIDI2LjAwMTEgOC43Nzc1MyAyNi4wMDExTDguNzc3NzkgMjguMDQyNEwxNi4xNDA4IDI4LjA0MTVMMTYuMTM5OCAyMi4zNjgyQzE2LjEzOTcgMTkuOTQ5MSAxNC43ODY1IDE3Ljk4MjcgMTMuODA4NyAxNi43NzI4QzEyLjgzMSAxNS41NjI2IDEyLjQ0NzUgMTQuNzAwOCAxMi4xMDQ4IDE0LjA3NThDMTEuNzA1MSAxMy4zNDQyIDEwLjY1MjkgMTMuODIzOSAxMC44MDM0IDE0LjY1NTNDMTAuOTUzOCAxNS40ODY4IDEyLjIzMTIgMTguMTMzMSAxMi4yMzEyIDE4LjEzMzFDMTEuNDUzNyAxOC45NTE1IDEwLjk5ODMgMjAuMDI2NCAxMC45NDk5IDIxLjE1NzciIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMC41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPHBhdGggZD0iTTkuODQ5ODIgMTguNzk1OUM5Ljg0OTgyIDE4Ljc5NTkgOC42NDc0NiAxOS43NTQxIDguMjk2ODggMjAuNzExMiIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIwLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8cGF0aCBkPSJNMTkuMDc4MSAxMi4zODY0TDIxLjE4MDYgNS45ODM0TDIzLjM4NDMgOC40NTI3M0wxOS4wNzgxIDEyLjM4NjRaIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjAuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxwYXRoIGQ9Ik0xNi45NzI4IDkuNTYyOTVMMTkuNTc3NCAzLjA2MDIyTDE1LjYxOTEgMi45NTk5NkwxNi45NzI4IDkuNTYyOTVaIiBzdHJva2U9ImJsYWNrIiBzdHJva2Utd2lkdGg9IjAuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxwYXRoIGQ9Ik0xNS41NzEgMTQuMzUyM0wxMy44Njc2IDcuNDQ2NzhMMTEuMjYzNyA5LjY2NDYyTDE1LjU3MSAxNC4zNTIzWiIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIwLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L2c+CjxkZWZzPgo8Y2xpcFBhdGggaWQ9ImNsaXAwXzIwMThfMzA5Ij4KPHJlY3Qgd2lkdGg9IjM0IiBoZWlnaHQ9IjMxIiBmaWxsPSJ3aGl0ZSIvPgo8L2NsaXBQYXRoPgo8L2RlZnM+Cjwvc3ZnPgo="
+                              width="40" height="40">
+
+                        <h4><b>Thank you</b></h4>
+                        <p style="font-size:medium;">Send customers a thank you message including 10% off their next purchase.</p>
+                        <p style="font-size:small;"><span class="icon icon-heart-stroke" style="color:rgb(var(--color)); mask-size: 100%;"></span> Reach up to <b>12</b> recent customers.</p>
+      
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: var(--spacer-4);">
+                              <p class="workflow-status" style="margin: 0;"><span class="icon icon-circle" style="color:rgb(var(--color))"></span> Unpublished</p>
+                              <div class="button-group">
+                                    <button class="button"><span class="icon icon-pencil"></span></button>
+                                    <button class="button primary">Publish</button>
+                              </div>
+                        </div>
+                  </section>
+                  <section class="one-click-workflows" data-workflow-type="Abandoned Cart Discount">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0RDMzQxRSIgc3Ryb2tlPSIjMDAwIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS13aWR0aD0iLjUiIGQ9Ik0xMi43MzcgMzAuMDk0YS42LjYgMCAwIDEgLjI4LS4yOTEuODEuODEgMCAwIDEgLjg1NC4wOGMuMTEuMDkxLjE3Ni4yMS4xOS4zMzUuMDU5LjUzNC4xODcgMS4wMTIuNDIgMS4zNiAxLjY0NSAyLjQ2IDUuMDUgMy4zODcgNy42MjUgMy43M2w4LjA4IDEuMTI1cS4zOTEuMDU0Ljc4OC4wNTVjLjczOCAwIDEuNDY2LS4xNDIgMi4xMjItLjQxNWE0LjUgNC41IDAgMCAwIDEuNjUyLTEuMTUyYy40My0uNDg1LjcxLTEuMDQ1LjgxOC0xLjYzNWEzLjA3IDMuMDcgMCAwIDAtLjItMS43NTVsLTEuNjE2LTMuODI2IDIuOTgxLTIuNjM2Yy40NzQtLjQxLjgzLS45IDEuMDQyLTEuNDM1LjIxMy0uNTM0LjI3Ny0xLjEuMTg4LTEuNjU2LS4xMy0uNzYtLjU0NS0xLjQ3LTEuMTktMi4wMzMtLjY0Ni0uNTYzLTEuNDktLjk1My0yLjQyLTEuMTE2bC0yLjY2Ni0uNDdhNS41IDUuNSAwIDAgMCAuMzQtMi43MTQgNS45IDUuOSAwIDAgMC0xLjAyLTIuNjAyIDcuNCA3LjQgMCAwIDAtMi4yMTItMi4wNjIgOS4zIDkuMyAwIDAgMC0zLjA0My0xLjE4NmwtMi4yOS0uNDY1YTQuOSA0LjkgMCAwIDAtLjg2OS0yLjQyYy0uNTExLS43NDUtMS4yMjQtMS4zODYtMi4wODUtMS44NzZhOCA4IDAgMCAwLTIuODg4LS45NTggOC42IDguNiAwIDAgMC0zLjExNi4xNTIgNy42IDcuNiAwIDAgMC0yLjcyNSAxLjIzYy0uNzgyLjU3LTEuMzk0IDEuMjc2LTEuNzkyIDIuMDY1YTQuNyA0LjcgMCAwIDAtLjUwMiAyLjQ4N2MuMDY3Ljg1LjM3IDEuNjc1Ljg4OCAyLjQxN2wtOC4xIDE4LjI4MmEzLjA3IDMuMDcgMCAwIDAtLjIyOSAxLjc2N2MuMS41OTYuMzc2IDEuMTYzLjgwNSAxLjY1NC40MjguNDkxLjk5Ny44OTIgMS42NTcgMS4xNjkuNjYuMjc2IDEuMzk0LjQyIDIuMTM4LjQyIDEuOTA1IDAgNC4xMzMtLjk1NSA0LjgxMi0yLjQ4NnoiLz48cGF0aCBmaWxsPSIjMDAwIiBkPSJNMjEuMDA2IDIxLjc0OGMxLjk1OS4zOTcgMy4yOTYgMi4wMiAyLjc1NyAzLjU0MWwtLjEyNy4yOTRjLTEuMDM2IDEuOTgzLTMuNjE0LjU0Ni00LjgzNCAxLjk3LjY2Ni0xLjI5MyAyLjIwNC01LjgwNSAyLjIwNC01LjgwNSIvPjxwYXRoIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9Ii41IiBkPSJNMTUuOTk3IDExLjUxMXEuMjM1LjAzOS40NzQuMDRjLjU5My0uMDAxIDEuMTY0LS4xODEgMS42LS41MDYuNDM0LS4zMjUuNzAyLS43Ny43NS0xLjI0Ny4wNDctLjQ3Ni0uMTMtLjk1LS40OTUtMS4zMjctLjM2Ni0uMzc2LS44OTQtLjYyNy0xLjQ3OS0uNzA0YTIuOCAyLjggMCAwIDAtMS42NzguMjkyYy0uNDk0LjI2NC0uODQ3LjY2OS0uOTg4IDEuMTMzLS4xNDIuNDY1LS4wNjEuOTU1LjIyNSAxLjM3NHMuNzU4LjczNiAxLjMyLjg4N3EuMTMzLjAzNi4yNy4wNThtLS4xMzYuMTM0LjA4OC4wMTcgOC42NjUgMS43NjFjLjQ5NC4xLjk1Ny4yODEgMS4zNjEuNTMyLjQwNC4yNS43NC41NjUuOTg2LjkyNS4yNDcuMzYuNC43NTcuNDQ4IDEuMTY2YTIuNDYgMi40NiAwIDAgMS0uMTY1IDEuMjE0bC0xLjY3IDMuODQ4LTEuODEgNC4xNzctLjEyNy4yOTRNNi42NDIgMzEuOTcxbDUuMzQ5LTEyLjA3NyAzLjY5My04LjM0NG0yLjg4NCAxNi4zNDJhLjkuOSAwIDAgMCAuMjMzLS4zMzhjLjY2Ny0xLjI5NCAyLjIwNS01LjgwNiAyLjIwNS01LjgwNiIvPjxwYXRoIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9Ii41IiBkPSJtMjUuNjE1IDIxLjEyIDcuNzU1IDEuMzY0LTQuODk0IDQuMzI3IDIuNTA1IDUuOTI0LTguMDk3LTEuMTI0Yy0zLjkwMS0uNTE3LTUuMjQxLTIuMDIyLTQuMzEtMy43MTVxLjA5Ny0uMTc4LjIzNC0uMzM4YzEuMjItMS40MjYgMy43OTguMDEyIDQuODM0LTEuOTcxcS4wNzYtLjE0NC4xMjctLjI5NGMuNTM5LTEuNTItLjc5OC0zLjE0NC0yLjc1Ny0zLjU0MWwtOC43NTgtMS43OCIvPjwvc3ZnPg=="
+                              width="40" height="40">
+
+                        <h4><b>Abandoned cart discount</b></h4>
+                        <p style="font-size:medium;">Send shoppers 15% off items they left in their cart.</p>
+                        <p style="font-size:small;"><span class="icon icon-heart-stroke" style="color:rgb(var(--color)); mask-size: 100%;"></span> Your items are in <b>10</b> shoppers’ carts.</p>
+      
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: var(--spacer-4);">
+                              <p class="workflow-status" style="margin: 0;"><span class="icon icon-circle" style="color:rgb(var(--color))"></span> Unpublished</p>
+                              <div class="button-group">
+                                    <button class="button"><span class="icon icon-pencil"></span></button>
+                                    <button class="button primary">Publish</button>
+                              </div>
+                        </div>
+                  </section>
+                  
+            </div>
+      </div>
+
+
+
+            <div id="workflow-list" style="display: grid; gap: var(--spacer-7);">
+                <table>
+                    <caption>
+                        <div style="display: flex; align-items: center;">
+                            <h3 style="margin-right: auto;">Abandoned cart</h3>
+                            <div style="display: flex; gap: var(--spacer-4); align-items: center;">
+                                <small><span class="icon icon-circle-fill"></span> Published</small>
+                                <div class="button-group">
+                                    <a class="button" aria-label="Edit workflow" href="#"><span class="icon icon-pencil"></span></a>
+                                    <button class="button outline-danger" type="button" aria-label="Delete workflow"><span class="icon icon-trash2"></span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th style="width: 40%;">Email</th>
+                            <th>Delay</th>
+                            <th>Sent</th>
+                            <th>Opens</th>
+                            <th>Clicks</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Email">You left something in your cart</td>
+                            <td data-label="Delay">24 Hours</td>
+                            <td data-label="Sent" style="white-space: nowrap;">0</td>
+                            <td data-label="Opens" style="white-space: nowrap;">0%</td>
+                            <td data-label="Clicks" style="white-space: nowrap;">0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    <script src="workflows.js"></script>
+</body>
+</html>
