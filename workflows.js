@@ -13,19 +13,14 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 function createPublishedWorkflow(workflow) {
     var _a, _b;
-    console.log('createPublishedWorkflow called');
     const title = ((_a = workflow.querySelector('h4')) === null || _a === void 0 ? void 0 : _a.textContent) || 'Untitled Workflow';
     const description = ((_b = workflow.querySelector('.workflow-description')) === null || _b === void 0 ? void 0 : _b.textContent) || '';
-    console.log('Workflow title:', title);
-    console.log('Workflow description:', description);
     const subjectLines = {
         "Wished-for item": "Come back for 15% off an item on your wishlist!",
         "Thank you": "Our Way of Saying Thanks – 10% Off Just for You",
         "Abandoned cart discount": "Your cart misses you - 15% off inside!"
     };
-    console.log('Available subject lines:', Object.keys(subjectLines));
     const subjectLine = subjectLines[title] || description;
-    console.log(`Subject line for "${title}": ${subjectLine}`);
     // Update status to "Published"
     const statusElement = workflow.querySelector('.workflow-status');
     if (statusElement) {
@@ -76,7 +71,7 @@ function addToPublishedWorkflows(title, description) {
                     <div style="display: flex; gap: var(--spacer-4); align-items: center;">
                         <small><span class="icon icon-circle-fill"></span> Published</small>
                         <div class="button-group">
-                            <a class="button" aria-label="Edit workflow" href="#"><span class="icon icon-pencil"></span></a>
+                            <a class="button" aria-label="Edit workflow"><span class="icon icon-pencil"></span></a>
                             <button class="button outline-danger" type="button" aria-label="Delete workflow"><span class="icon icon-trash2"></span></button>
                         </div>
                     </div>
@@ -166,111 +161,7 @@ function checkAndUpdateOneClickWorkflowsVisibility() {
         parentDiv.style.display = anyVisible ? '' : 'none';
     }
 }
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM loaded in workflows.ts');
-    const editButtons = document.querySelectorAll('.button-group .button[aria-label="Edit workflow"]');
-    console.log('Edit buttons found:', editButtons.length);
-    editButtons.forEach((button, index) => {
-        button.addEventListener('click', (event) => {
-            var _a;
-            event.preventDefault();
-            console.log(`Button ${index + 1} clicked`);
-            const workflowType = button.dataset.workflowType;
-            console.log('Workflow type:', workflowType);
-            // Find the workflow name
-            let workflowName = '';
-            const workflowSection = button.closest('.one-click-workflows');
-            if (workflowSection) {
-                const nameElement = workflowSection.querySelector('h4');
-                workflowName = nameElement ? ((_a = nameElement.textContent) === null || _a === void 0 ? void 0 : _a.trim()) || '' : '';
-                console.log('Workflow section found, name element:', !!nameElement);
-            }
-            else {
-                console.log('Workflow section not found');
-            }
-            console.log('Workflow name:', workflowName);
-            if (workflowType) {
-                // Store the data in sessionStorage
-                sessionStorage.setItem('workflowType', workflowType);
-                sessionStorage.setItem('workflowName', workflowName);
-                console.log('Data stored in sessionStorage');
-                window.location.href = 'new-workflow.html';
-            }
-            else {
-                console.log('No workflow type found, navigating to new-workflow.html');
-                window.location.href = 'new-workflow.html';
-            }
-        });
-    });
-});
-document.addEventListener('DOMContentLoaded', () => {
-    const oneClickWorkflows = document.querySelectorAll('.one-click-workflows');
-    const publishedWorkflowsContainer = document.getElementById('published-workflows');
-    oneClickWorkflows.forEach(workflow => {
-        const publishButton = workflow.querySelector('.publish-button');
-        const statusText = workflow.querySelector('.status-text');
-        const workflowType = workflow.getAttribute('data-workflow-type');
-        publishButton === null || publishButton === void 0 ? void 0 : publishButton.addEventListener('click', () => publishWorkflow(workflow, workflowType));
-    });
-    function publishWorkflow(workflow, workflowType) {
-        var _a;
-        // Update status to "Published"
-        const statusText = workflow.querySelector('.status-text');
-        if (statusText) {
-            statusText.textContent = 'Published';
-            (_a = statusText.parentElement) === null || _a === void 0 ? void 0 : _a.classList.add('published');
-        }
-        // Disable the publish button
-        const publishButton = workflow.querySelector('.publish-button');
-        if (publishButton) {
-            publishButton.setAttribute('disabled', 'true');
-            publishButton.textContent = 'Published';
-        }
-        // Animate the card sliding away
-        setTimeout(() => {
-            workflow.style.transition = 'transform 0.5s, opacity 0.5s';
-            workflow.style.transform = 'translateX(100%)';
-            workflow.style.opacity = '0';
-            // Remove the workflow from the one-click section
-            setTimeout(() => {
-                workflow.remove();
-                addToPublishedWorkflows(workflowType);
-            }, 500);
-        }, 1000);
-    }
-    function addToPublishedWorkflows(workflowType) {
-        if (!publishedWorkflowsContainer || !workflowType)
-            return;
-        const newWorkflow = document.createElement('div');
-        newWorkflow.className = 'published-workflow';
-        newWorkflow.innerHTML = `
-            <h3>${getWorkflowTitle(workflowType)}</h3>
-            <p><span class="icon icon-circle-fill"></span> Published</p>
-        `;
-        newWorkflow.style.opacity = '0';
-        newWorkflow.style.transform = 'translateY(20px)';
-        publishedWorkflowsContainer.appendChild(newWorkflow);
-        // Trigger reflow
-        newWorkflow.offsetHeight;
-        newWorkflow.style.transition = 'opacity 0.5s, transform 0.5s';
-        newWorkflow.style.opacity = '1';
-        newWorkflow.style.transform = 'translateY(0)';
-    }
-    function getWorkflowTitle(workflowType) {
-        switch (workflowType) {
-            case 'wished-item':
-                return 'Wished-for item';
-            case 'thank-you':
-                return 'Thank you';
-            case 'abandoned-cart':
-                return 'Abandoned cart discount';
-            default:
-                return 'New Workflow';
-        }
-    }
-});
 function animateGridLayout(publishedWorkflow) {
-    console.log('animateGridLayout called');
     const statsGrid = document.querySelector('.stats-grid');
     if (!statsGrid) {
         console.error('Stats grid not found');
