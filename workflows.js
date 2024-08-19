@@ -24,7 +24,7 @@ function createPublishedWorkflow(workflow) {
     // Update status to "Published"
     const statusElement = workflow.querySelector('.workflow-status');
     if (statusElement) {
-        statusElement.innerHTML = '<span class="icon icon-circle-fill" style="color: green;"></span> Published';
+        statusElement.innerHTML = '<span class="icon icon-circle-fill" style="color: #23A094;"></span> Published';
     }
     // Disable the publish button
     const publishButton = workflow.querySelector('.button.primary');
@@ -69,7 +69,7 @@ function addToPublishedWorkflows(title, description) {
                 <div style="display: flex; align-items: center;">
                     <h3 style="margin-right: auto;">${title}</h3>
                     <div style="display: flex; gap: var(--spacer-4); align-items: center;">
-                        <small><span class="icon icon-circle-fill"></span> Published</small>
+                        <small><span class="icon icon-circle-fill" style="color: #23A094;"></span> Published</small>
                         <div class="button-group">
                             <a class="button" aria-label="Edit workflow"><span class="icon icon-pencil"></span></a>
                             <button class="button outline-danger" type="button" aria-label="Delete workflow"><span class="icon icon-trash2"></span></button>
